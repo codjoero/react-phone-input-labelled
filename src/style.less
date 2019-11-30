@@ -1,5 +1,5 @@
 .react-tel-input {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Avenir", medium, Arial, sans-serif;
   font-size: 15px;
   position: relative;
   width: 100%;
@@ -209,7 +209,9 @@
   .fo {
     background-position: -32px -44px;
   }
-  .fr, .bl, .mf {
+  .fr,
+  .bl,
+  .mf {
     background-position: -48px -44px;
   }
   .ga {
@@ -465,7 +467,8 @@
   .ni {
     background-position: -112px -99px;
   }
-  .nl, .bq {
+  .nl,
+  .bq {
     background-position: -128px -99px;
   }
   .no {
@@ -712,33 +715,45 @@
   .v-hide {
     visibility: hidden;
   }
-  input[type=text],
-  input[type=tel] {
+  input[type="text"],
+  input[type="tel"] {
     position: relative;
-    font-size: 14px;
-    letter-spacing: .01rem;
+    font-size: 15px;
+    color: #383737;
+    letter-spacing: 0.01rem;
     z-index: 0;
-    margin-top: 0 !important;
+    margin-top: 13px !important;
     margin-bottom: 0 !important;
-    padding-left: 48px;
+    padding-left: 38px;
     margin-left: 0;
-    background: #FFFFFF;
-    border: 1px solid #CACACA;
-    border-radius: 5px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #929292;
+    border-radius: 0;
     line-height: 25px;
     height: 35px;
     width: 300px;
     outline: none;
     &.invalid-number {
-      border: 1px solid #d79f9f;
-      background-color: #FAF0F0;
-      border-left-color: #cacaca;
+      border: none;
+      border-bottom: 1px solid #eb2010;
+      background-color: none;
+      border-left-color: none;
       &:focus {
-        border: 1px solid #d79f9f;
-        border-left-color: #cacaca;
-        background-color: #FAF0F0;
+        border: none;
+        border-bottom: 1px solid #eb2010;
+        background-color: none;
+        border-left-color: none;
       }
     }
+  }
+  .react-tel-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    color: #828282;
+    padding: 0;
   }
   .flag-dropdown {
     outline: none;
@@ -746,26 +761,26 @@
     top: 0;
     bottom: 0;
     padding: 0;
-    background-color: #eaeaea;
-    border: 1px solid #cacaca;
-    border-radius: 3px 0 0 3px;
+    background-color: none;
+    border: none;
     &.open-dropdown {
-      background: #fff;
+      background: none;
       border-radius: 3px 0 0 0;
       .selected-flag {
-        background: #fff;
+        background: none;
         border-radius: 3px 0 0 0;
       }
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       cursor: pointer;
       .selected-flag {
-        background-color: #fff;
+        background-color: none;
       }
     }
   }
   input[disabled] {
-    &+.flag-dropdown {
+    & + .flag-dropdown {
       &:hover {
         cursor: default;
         .selected-flag {
@@ -779,12 +794,11 @@
     position: relative;
     width: 38px;
     height: 100%;
-    padding: 0 0 0 8px;
-    border-radius: 3px 0 0 3px;
+    padding: 0;
     .flag {
       position: absolute;
       top: 50%;
-      margin-top: -5px;
+      margin-top: 1px;
     }
     .arrow {
       position: relative;
@@ -807,7 +821,7 @@
     position: absolute;
     z-index: 15;
     padding: 0;
-    margin: 10px 0 10px -1px;
+    margin: 5px 0 10px -1px;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.35);
     background-color: white;
     width: 300px;
@@ -862,7 +876,7 @@
     }
     .no-entries-message {
       padding: 7px 10px 11px;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 }
