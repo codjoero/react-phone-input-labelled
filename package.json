@@ -1,6 +1,6 @@
 {
   "name": "react-phone-input-labelled",
-  "version": "0.01.0",
+  "version": "1.0.0",
   "description": "A react component with a material-UI feel to format phone numbers",
   "main": "dist/lib.js",
   "scripts": {
