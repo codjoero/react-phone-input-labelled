@@ -30,7 +30,7 @@ class PhoneInput extends React.Component {
     searchStyle: PropTypes.object,
 
     containerClass: PropTypes.string,
-    labelStyle: PropTypes.string,
+    labelClass: PropTypes.string,
     inputClass: PropTypes.string,
     buttonClass: PropTypes.string,
     dropdownClass: PropTypes.string,
