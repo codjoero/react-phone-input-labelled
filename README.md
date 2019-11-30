@@ -1,24 +1,34 @@
-# React-Phone-Input-2
+# React-Phone-Input-labelled
+
+[react-phone-input-2](https://github.com/bl00mber/react-phone-input-2) with Material-UI 'like' label
+
 Highly customizable phone input component with auto formatting.
 
-[![npm version](https://img.shields.io/npm/v/react-phone-input-2.svg?style=flat)](https://www.npmjs.com/package/react-phone-input-2)
-[![npm downloads](https://img.shields.io/npm/dm/react-phone-input-2.svg?style=flat)](https://www.npmjs.com/package/react-phone-input-2)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bl00mber/react-phone-input-2#contributing)
-[![travis build](https://travis-ci.org/bl00mber/react-phone-input-2.svg?branch=master)](https://travis-ci.org/bl00mber/react-phone-input-2)
+### Original look
 
 ![alt tag](https://media.giphy.com/media/xiORAWnqoTJDsH0UOI/giphy.gif)
 
+### With a Material-UI TextField look:
+
+![alt tag](https://i.imgur.com/vr80Q04.png)
+
 ## Installation
+
 ```shell-script
-npm install react-phone-input-2 --save
+npm install react-phone-input-labelled --save
 ```
 
 ## Usage
-```jsx
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/dist/style.css'
 
-<PhoneInput defaultCountry={'us'} value={this.state.phone} onChange={handleOnChange} />
+```jsx
+import PhoneInput from "react-phone-input-labelled";
+import "react-phone-input-labelled/dist/style.css";
+
+<PhoneInput
+  defaultCountry={"us"}
+  value={this.state.phone}
+  onChange={handleOnChange}
+/>;
 ```
 
 ```jsx
@@ -28,6 +38,7 @@ handleOnChange(value) {
 ```
 
 ## Options
+
 <table>
   <tr>
     <th> Name </th>
@@ -64,6 +75,11 @@ handleOnChange(value) {
     <td> value </td>
     <td> string </td>
     <td colspan="2"> input state value </td>
+  </tr>
+  <tr>
+    <td> label </td>
+    <td> string </td>
+    <td colspan="2"> input label name </td>
   </tr>
   <tr>
     <td> placeholder </td>
@@ -139,7 +155,7 @@ handleOnChange(value) {
 ```jsx
 <PhoneInput
   inputExtraProps={{
-    name: 'phone',
+    name: "phone",
     required: true,
     autoFocus: true
   }}
@@ -147,6 +163,7 @@ handleOnChange(value) {
 ```
 
 ### Contents
+
 - [Style](#style)
 - [Events](#events)
 - [Regions](#regions)
@@ -161,6 +178,7 @@ handleOnChange(value) {
 - [Support](https://www.paypal.me/bloomber/20)
 
 ### Style
+
 <table>
   <tr>
     <td> containerClass </td>
@@ -171,6 +189,11 @@ handleOnChange(value) {
     <td> inputClass </td>
     <td> string </td>
     <td colspan="2"> class for input </td>
+  </tr>
+  <tr>
+    <td> labelClass </td>
+    <td> string </td>
+    <td colspan="2"> class for label </td>
   </tr>
   <tr>
     <td> buttonClass </td>
@@ -199,6 +222,11 @@ handleOnChange(value) {
     <td colspan="2"> styles for input </td>
   </tr>
   <tr>
+    <td> labelStyle </td>
+    <td> object </td>
+    <td colspan="2"> styles for label </td>
+  </tr>
+  <tr>
     <td> buttonStyle </td>
     <td> object </td>
     <td colspan="2"> styles for dropdown button </td>
@@ -216,6 +244,7 @@ handleOnChange(value) {
 </table>
 
 ### Events
+
 <table>
   <tr>
     <td> onChange </td>
@@ -226,7 +255,7 @@ handleOnChange(value) {
   </tr>
 </table>
 
-Country data object not returns from onKeyDown event
+Country data object does not return from onKeyDown event
 
 <table>
   <tr>
@@ -247,6 +276,7 @@ Country data object not returns from onKeyDown event
 </table>
 
 ### Regions
+
 <table>
   <tr>
     <th> Name </th>
@@ -276,22 +306,19 @@ Country data object not returns from onKeyDown event
 </table>
 
 Regions selected: {'europe'}
+
 ```jsx
-<PhoneInput
-  defaultCountry='it'
-  regions={'europe'}
-/>
+<PhoneInput defaultCountry="it" regions={"europe"} />
 ```
 
 Regions selected: {['north-america', 'carribean']}
+
 ```jsx
-<PhoneInput
-  defaultCountry='ca'
-  regions={['north-america', 'carribean']}
-/>
+<PhoneInput defaultCountry="ca" regions={["north-america", "carribean"]} />
 ```
 
 ### Custom area codes
+
 <table>
   <tr>
     <th> Name </th>
@@ -305,12 +332,13 @@ Regions selected: {['north-america', 'carribean']}
 
 ```jsx
 <PhoneInput
-  onlyCountries={['gr', 'fr', 'us']}
-  areaCodes={{gr: ['2694', '2647'], fr: ['369', '463'], us: ['300']}}
+  onlyCountries={["gr", "fr", "us"]}
+  areaCodes={{ gr: ["2694", "2647"], fr: ["369", "463"], us: ["300"] }}
 />
 ```
 
 ### Custom masks
+
 <table>
   <tr>
     <th> Name </th>
@@ -324,12 +352,13 @@ Regions selected: {['north-america', 'carribean']}
 
 ```jsx
 <PhoneInput
-  onlyCountries={['fr', 'at']}
-  masks={{fr: '+.. (...) ..-..-..', at: '+.. (....) ...-....'}}
+  onlyCountries={["fr", "at"]}
+  masks={{ fr: "+.. (...) ..-..-..", at: "+.. (....) ...-...." }}
 />
 ```
 
 ### Localization
+
 <table>
   <tr>
     <th> Name </th>
@@ -355,15 +384,15 @@ Regions selected: {['north-america', 'carribean']}
 
 Predefined translations
 `es`, `de`, `ru`, `fr`
-```jsx
-import es from 'lang/es.json'
 
-<PhoneInput
-  localization={es}
-/>
+```jsx
+import es from "lang/es.json";
+
+<PhoneInput localization={es} />;
 ```
 
 ### Preserve countries order
+
 <table>
   <tr>
     <th> Name </th>
@@ -377,12 +406,13 @@ import es from 'lang/es.json'
 
 ```jsx
 <PhoneInput
-  onlyCountries={['fr', 'at']}
-  preserveOrder={['onlyCountries', 'preferredCountries']}
+  onlyCountries={["fr", "at"]}
+  preserveOrder={["onlyCountries", "preferredCountries"]}
 />
 ```
 
 ### Other props
+
 <table>
   <tr>
     <td> renderStringAsFlag </td>
@@ -391,7 +421,9 @@ import es from 'lang/es.json'
 </table>
 
 ## Guides
+
 ### Phone without dialCode
+
 ```jsx
 handleOnChange(value, data) {
   this.setState({ rawPhone: value.replace(/[^0-9]+/g,'').slice(data.dialCode.length) })
@@ -399,21 +431,17 @@ handleOnChange(value, data) {
 ```
 
 ### Check validity of the phone number
-```jsx
-<PhoneInput
-  isValid={v => v === '1'}
-/>
-```
 
-### CDN
-```html
-<script src="https://unpkg.com/react-phone-input-2@2.x/dist/lib.js"></script>
+```jsx
+<PhoneInput isValid={v => v === "1"} />
 ```
 
 ## Contributing
+
 Code style changes not allowed
 
 ## License
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bl00mber/react-phone-input-2/blob/master/LICENSE)
 
-Make sure you have donated for lib maintenance:  [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/bloomber/20)
+Based on [react-phone-input-2](https://github.com/bl00mber/react-phone-input-2)

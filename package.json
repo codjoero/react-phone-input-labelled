@@ -1,7 +1,7 @@
 {
-  "name": "react-phone-input-2",
-  "version": "2.10.1",
-  "description": "A react component to format phone numbers",
+  "name": "react-phone-input-labelled",
+  "version": "0.01.0",
+  "description": "A react component with a material-UI feel to format phone numbers",
   "main": "dist/lib.js",
   "scripts": {
     "test": "jest",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bl00mber/react-phone-input-2.git"
+    "url": "git+https://github.com/codjoero/react-phone-input-labelled.git"
   },
   "keywords": [
     "react",
@@ -32,15 +32,12 @@
     "dist/style.css",
     "lang"
   ],
-  "author": "Nick Reiley <bloomber111@gmail.com> (https://github.com/bl00mber)",
-  "contributors": [
-    "Raza Gill <raza.gill@outlook.com> (https://github.com/razagill)"
-  ],
+  "author": "rownee2001@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bl00mber/react-phone-input-2/issues"
+    "url": "https://github.com/codjoero/react-phone-input-labelled/issues"
   },
-  "homepage": "https://github.com/bl00mber/react-phone-input-2",
+  "homepage": "https://github.com/codjoero/react-phone-input-labelled.git",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
@@ -79,6 +76,8 @@
     "lodash.memoize": "^4.1.2",
     "lodash.reduce": "^4.6.0",
     "lodash.startswith": "^4.2.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }
